@@ -5,12 +5,12 @@ public class CourseList {
     ArrayList<Course> courseList = new ArrayList<>();
 
     public void addCourse(Course c) {
-        this.courseList.add(c);
+        courseList.add(c);
 
     }
 
     public void removeCourse(Course c) {
-        this.courseList.remove(c);
+        courseList.remove(c);
     }
 
     @Override

@@ -1,18 +1,25 @@
+import java.util.ArrayList;
+
 public class Student extends Person {
 
     private String email;
     private String matricNumber;
-    // private Course cList[] = new Course[30];
-    // private int courseNum;
+    private ArrayList<Course> cList;
+    private int totalCredit;
+    final int MAXCRED = 18;
 
-    // public Student() {
-    //     cList = new Course[30];
-    // }
+    public Student() {
+        cList = new ArrayList<>();
+        totalCredit = 0;
+    }
 
-    // public void StudRegCourse(Course c) {
-    //     cList[courseNum] = c;
-    //     courseNum++;
-    // }
+    public void StudRegCourse(Course c) {
+        if ((totalCredit + c.getCredits()) <= MAXCRED) {
+            cList.add(c);
+            totalCredit += c.getCredits();
+        }
+
+    }
 
     public Student(String matricNumber) {
         this.matricNumber = matricNumber;
@@ -45,4 +52,5 @@ public class Student extends Person {
     public String toString() {
         return "Course{" + ", MatricNumber =" + matricNumber + "}";
     }
+
 }
