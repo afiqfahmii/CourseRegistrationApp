@@ -12,6 +12,7 @@ public class Course {
         if (studNum < MAX) {
             sList[studNum] = s;
             studNum++;
+            System.out.println("Added Successfully");
         } else {
             System.out.println("Full");
         }
