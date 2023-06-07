@@ -3,11 +3,20 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        //Print menu
+       printMenu();
 
+<<<<<<< HEAD
         // Student student1 = new Student();
         Scanner s = new Scanner(System.in);
         Course c1 = new Course("OOP", "SECJ2020", 3);
         ArrayList<Course>courseList = new ArrayList<>();
+=======
+        //
+        // Student student1 = new Student();
+        Scanner s = new Scanner(System.in);
+        Course c1 = new Course("OOP", "SECJ2020", 3);
+>>>>>>> 2a826aa35aa6e45e904ec35a1c18a956221595f7
 
         System.out.println("Enter student details:");
         System.out.print("Name: ");
@@ -29,6 +38,7 @@ public class App {
         Student student = new Student(name, age, address, email, matricNumber);
         c1.addStudent(student);
 
+<<<<<<< HEAD
         System.out.println("=============================================================");
         System.out.println("Enter Course Details:");
         System.out.println("Course Name: ");
@@ -42,5 +52,19 @@ public class App {
         courseList.addCourse(course);
         
 
+=======
+        s.close();
+    }
+
+    public static void printMenu(){
+    //Print menu details here
+    System.out.println("+--------------------------------------------------------------+");
+    System.out.println("+------------------- FACULTY OF COMPUTING ---------------------+");
+    System.out.println("+-------------------- COURSE REGISTRATION ---------------------+");
+    System.out.println("+--------------------------------------------------------------+");
+    System.out.println("1. Log In");
+    System.out.println("2. Forgot Password");
+    System.out.println("3. Exit");
+>>>>>>> 2a826aa35aa6e45e904ec35a1c18a956221595f7
     }
 }

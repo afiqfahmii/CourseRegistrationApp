@@ -1,18 +1,34 @@
-## Getting Started
+# GROUP ASSIGNNMENT
+Siapkan before 8/6
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# For individual project:-
 
-## Folder Structure
+Add controller for each entity like StudController, AAController, LectController
 
-The workspace contains two folders by default, where:
+The controller will handle functionality for respective class
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+From main you have menu :-
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Let say you want to log in as student
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Enter student
 
-## Dependency Management
+Go to studentController
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+@
+
+Enter AA
+
+Go to aaController
+
+
+
+For people, itu entity class
+
+In real world, entity will be mapped to database table
+
+For controller, itu handle functionality
+
+Student want to edit, student want to add etc
+
+Later, do UI class handle interaction
