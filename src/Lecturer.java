@@ -2,15 +2,17 @@ public class Lecturer extends Person {
 
     private String department;
     private String LecturerId;
+    private Course course;
 
     public Lecturer() {
 
     }
 
-    public Lecturer(String department, String LecturerId) {
-
+    public Lecturer(String name, int age, String address, String department, String LecturerId, Course course) {
+        super(name, age, address);
         this.department = department;
         this.LecturerId = LecturerId;
+        this.course = course;
     }
 
     public String getDepartment() {
@@ -27,6 +29,10 @@ public class Lecturer extends Person {
 
     public void setStaffId(String staffId) {
         this.LecturerId = staffId;
+    }
+
+    public Course getCourse(){
+        return course;
     }
 
     @Override

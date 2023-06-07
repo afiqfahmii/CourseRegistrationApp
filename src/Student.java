@@ -4,30 +4,18 @@ public class Student extends Person {
 
     private String email;
     private String matricNumber;
-    private ArrayList<Course> cList;
+    private ArrayList<Course> cList = new ArrayList<>();;
     private int totalCredit;
     final int MAXCRED = 18;
-
-    public Student() {
-        cList = new ArrayList<>();
-        totalCredit = 0;
-    }
-
-    public void StudRegCourse(Course c) {
-        if ((totalCredit + c.getCredits()) <= MAXCRED) {
-            cList.add(c);
-            totalCredit += c.getCredits();
-        }
-
-    }
-
-    public Student(String matricNumber) {
-        this.matricNumber = matricNumber;
-    }
 
     public Student(String name, int age, String address, String email, String matricNumber) {
         super(name, age, address);
         this.email = email;
+        this.matricNumber = matricNumber;
+
+    }
+
+    public Student(String matricNumber) {
         this.matricNumber = matricNumber;
     }
 
@@ -46,6 +34,31 @@ public class Student extends Person {
     public void setMatricNumber(String matricNumber) {
         this.matricNumber = matricNumber;
     }
+
+    public void StudRegCourse(Course c) {
+        if ((totalCredit + c.getCredits()) <= MAXCRED) {
+            cList.add(c);
+            totalCredit += c.getCredits();
+        }
+
+    }
+     public Course getCourse(int i){
+        return cList.get(i);
+     }
+
+    public void StudRemoveCourse(int i) {
+        totalCredit -= cList.get(i).getCredits();
+        cList.remove(i);
+        
+    }
+
+    public void displayAllCourses() {
+        for (int i = 0; i < cList.size(); i++) {
+            System.out.println(cList.get(i).getCourseName() + " " + cList.get(i).getCourseCode() + " "
+                    + cList.get(i).getCredits());
+        }
+    }
+    
 
     @Override
 

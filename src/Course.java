@@ -4,23 +4,17 @@ public class Course {
     private String courseCode;
     private int credits;
     private Student sList[] = new Student[30];
-    private int studNum;
-    final int MAX = 30;
+    private int studNum = 0;
+    private final int MAX = 30;
 
-    public void addStudent(Student s) {
-
-        if (studNum < MAX) {
-            sList[studNum] = s;
-            studNum++;
-            System.out.println("Added Successfully");
-        } else {
-            System.out.println("Full");
-        }
-
+    public Course(String courseName, String courseCode, int credits) {
+        // course num 0
+        this.courseName = courseName;
+        this.courseCode = courseCode;
+        this.credits = credits;
     }
 
     public Course() {
-        sList = new Student[30];
     }
 
     public String getCourseName() {
@@ -47,11 +41,44 @@ public class Course {
         this.credits = credits;
     }
 
-    public Course(String courseName, String courseCode, int credits) {
-        // course num 0
-        this.courseName = courseName;
-        this.courseCode = courseCode;
-        this.credits = credits;
+    public Student getStudent(int i) {
+        return sList[i];
+    }
+
+    public void addStudent(Student s) {
+
+        if (studNum < MAX) {
+            sList[studNum] = s;
+            studNum++;
+            System.out.println("Added Successfully");
+        } else {
+            System.out.println("Full");
+        }
+
+    }
+
+    public void removeStudent(Student s) {
+        int indexToRemove = -1;
+
+        // Find the index of the student to be removed
+        for (int i = 0; i < sList.length; i++) {
+            if (sList[i] == s) {
+                indexToRemove = i;
+                break;
+            }
+        }
+    
+        // If the student was found, remove them and shift the elements
+        if (indexToRemove != -1) {
+            for (int i = indexToRemove; i < sList.length - 1; i++) {
+                sList[i] = sList[i + 1];
+            }
+            sList[sList.length - 1] = null;
+        }
+    }
+
+    public int getStudentNum() {
+        return studNum;
     }
 
     @Override
