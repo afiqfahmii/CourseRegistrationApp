@@ -1,7 +1,7 @@
 # GROUP ASSIGNNMENT
+Siapkan before 8/6
 
-
-For individual project:-
+# For individual project:-
 Add controller for each entity like StudController, AAController, LectController
 The controller will handle functionality for respective class
 
