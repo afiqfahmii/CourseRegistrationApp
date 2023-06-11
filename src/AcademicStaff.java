@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class AcademicStaff extends Person {
 
     private String staffNum;
     private String department;
+    private Course cList[] = new Course[30];
+    final int COURSENUM = 30;
 
     public AcademicStaff(String staffNum, String department) {
         super();
@@ -32,7 +36,5 @@ public class AcademicStaff extends Person {
     }
 
     public void createCourse(Course c){
-        
     }
-
 }

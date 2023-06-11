@@ -63,7 +63,7 @@ public class Student extends Person {
     @Override
 
     public String toString() {
-        return "Course{" + ", MatricNumber =" + matricNumber + "}";
+        return "Name{" + name + ", MatricNumber =" + matricNumber + "}";
     }
 
 }

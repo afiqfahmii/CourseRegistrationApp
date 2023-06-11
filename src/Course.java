@@ -83,7 +83,15 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" + "name=" + courseName + ", code=" + courseCode + ", credits=" + credits + "}";
+        return "Course{" + "Course Name =" + courseName + ", Course Code=" + courseCode + ", Number Of Credit=" + credits + "}";
+    }
+
+    public void printStudent(){
+        System.out.println("STUDENTS:");
+        for(int i = 0 ; i < studNum ; i++){
+            System.out.println(sList[i].toString());
+            System.out.println();
+        }
     }
 
 }
