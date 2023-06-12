@@ -1,3 +1,11 @@
+//*TEAM MEMBER 
+/*      AZHAN HANIFF BIN AZNI A21EC0017
+        MUHAMMAD TAUFIQ BIN JURIMI A21EC0095
+        AFIQ FAHMI BIN ROSLAN A21EC0153
+        MUHAMMAD NAJWAN HAZIM BIN KHAIRI A21EC0087*/
+
+
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -124,7 +132,7 @@ public class App {
                                                 }
                                         }
                                         if (index == -1)
-                                                System.out.println("SALAH BODOH");
+                                                System.out.println("Wrong Input!");
                                         break;
                                 }
                                 case 2: {
